@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 RUN apk add git py3-pip py3-numpy && pip3 install websockify \
-    && git clone -b v1.3.0 https://github.com/novnc/noVNC.git /app \
+    && git clone -b v1.4.0 https://github.com/novnc/noVNC.git /app \
     && cd /app && rm -rf .git
 
 # This port exposes the webserver
