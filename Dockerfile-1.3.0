@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk add git py3-pip py3-numpy && pip3 install websockify \
+RUN apk add git py3-pip py3-numpy && pip3 install websockify --break-system-packages \
     && git clone -b v1.3.0 https://github.com/novnc/noVNC.git /app \
     && cd /app && rm -rf .git
 
